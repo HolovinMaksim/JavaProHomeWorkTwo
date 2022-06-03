@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Main {
 
     static String merchantName;
+    static String merchantSurname;
     static String email;
     static String phone;
     static String productName;
@@ -23,6 +24,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter merchant name: ");
         merchantName = scanner.nextLine();
+        System.out.println("Enter merchant surname: ");
+        merchantSurname = scanner.nextLine();
         System.out.print("Enter merchant phone: ");
         phone = scanner.nextLine();
         System.out.print("Enter merchant email: ");
@@ -36,7 +39,7 @@ public class Main {
     }
 
     private static String processData() {
-        merchantA = new MerchantBonus(merchantName, phone, email);
+        merchantA = new MerchantBonus(merchantName, merchantSurname, phone, email);
         infoMerchant = merchantA.infoMerchant();
         product = new ProductSales(productName, quantity, price);
         infoProduct = product.infoProduct();
